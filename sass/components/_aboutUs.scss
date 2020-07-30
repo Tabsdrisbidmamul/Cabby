@@ -1,0 +1,12 @@
+.about-us {
+    &__content {
+        grid-column: full-start / col-end 3;
+        background-color: royalblue;
+    }
+
+    &__pictures {
+        grid-column: col-start 4/ full-end;
+        background-color: goldenrod;
+    }
+    
+}

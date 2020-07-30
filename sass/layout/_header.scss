@@ -1,0 +1,26 @@
+.header {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(
+        to bottom,
+        rgba($color-primary, .8),
+        rgba($color-primary-dark, .8),
+    ) ,url('./../../img/hero-large.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-content: center;
+    justify-content: center;
+
+    &__details {
+        grid-row: 2 / 4;
+
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+
+    }
+}

@@ -1,0 +1,36 @@
+body {
+    font-family: $font-main;
+}
+
+%heading-common {
+    font-weight: 300;
+    color: $color-grey-light-1;
+}
+
+.heading {
+    &-1 {
+        @extend %heading-common;
+        font-size: 8rem;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+
+    }
+
+    &-2 {
+        @extend %heading-common;
+        font-size: 3rem;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+    }
+
+    &-3 {
+        @extend %heading-common;
+        font-size: 1.8rem;
+    }
+
+    &-4 {
+        @extend %heading-common;
+        font-size: 1.4rem;
+    }
+
+}
