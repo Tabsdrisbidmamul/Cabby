@@ -2,7 +2,37 @@
     z-index: 30;
 
     position: fixed;
-    background-color: $color-primary-dark;
+    // background-color: $color-primary-dark;
     height: 6rem;
     width: 100%;
+
+    display: flex;
+
+    &__logo {
+        flex: 1;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-grey-light-2;
+        }
+    }
 }

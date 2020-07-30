@@ -1,14 +1,64 @@
 .btn {
-    border: none;
-    font-family: inherit;
-    color: $color-grey-light-1;
-    background-color: $color-secondary;
-    font-size: 1.6rem;
-    padding: 1.75rem 4rem;
-    border-radius: 100rem;
-    text-transform: uppercase;
+ 
+}
 
-    &--call {
-        justify-self: end;
+.btn-call {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-family: inherit;
+        color: $color-grey-light-1;
+        background-image: linear-gradient(
+            to right,
+            rgba($color-gradient-yellow, .9), 
+            rgba($color-gradient-orange, .9));
+        font-size: 1.6rem;
+        
+        border-radius: 100rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: relative;
+    }
+
+    & > * {
+        display: inline-block;
+        transition: all 200ms;
+        height: 100%;
+        width: 100%;
+    }
+
+    &--visible {
+        padding: 1.75rem 8rem;
+    }
+
+    &--invisible {
+        position: absolute;
+        left: 0;
+        top: -100%;
+        padding: 1.75rem 0;
+        text-align: center;
+    }
+
+    &:hover,
+    &:active {
+        background-image: linear-gradient(
+            to left,
+            rgba($color-gradient-yellow, .9), 
+            rgba($color-gradient-orange, .9));
+        box-shadow: 0 2rem 4rem rgba(#000, .2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover &--invisible {
+        top: 0;
+    }
+
+    &:hover &--visible {
+        transform: translateY(100%);
     }
 }

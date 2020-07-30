@@ -12,7 +12,8 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", Sans-Serif; }
+  font-family: "Lato", Sans-Serif;
+  color: #bdc3c7; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-weight: 300;
@@ -54,17 +55,47 @@ body {
   grid-column: center-start / center-end;
   background-color: indianred; }
 
-.btn {
-  border: none;
+.btn-call:link, .btn-call:visited {
+  text-decoration: none;
   font-family: inherit;
   color: #ecf0f1;
-  background-color: #4a3f35;
+  background-image: linear-gradient(to right, rgba(250, 217, 97, 0.9), rgba(247, 107, 28, 0.9));
   font-size: 1.6rem;
-  padding: 1.75rem 4rem;
   border-radius: 100rem;
-  text-transform: uppercase; }
-  .btn--call {
-    justify-self: end; }
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: relative; }
+
+.btn-call > * {
+  display: inline-block;
+  transition: all 200ms;
+  height: 100%;
+  width: 100%; }
+
+.btn-call--visible {
+  padding: 1.75rem 8rem; }
+
+.btn-call--invisible {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  padding: 1.75rem 0;
+  text-align: center; }
+
+.btn-call:hover, .btn-call:active {
+  background-image: linear-gradient(to left, rgba(250, 217, 97, 0.9), rgba(247, 107, 28, 0.9));
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+
+.btn-call:focus {
+  outline: none; }
+
+.btn-call:hover .btn-call--invisible {
+  top: 0; }
+
+.btn-call:hover .btn-call--visible {
+  transform: translateY(100%); }
 
 .footer {
   grid-column: full-start / full-end;
@@ -95,9 +126,24 @@ body {
 .nav {
   z-index: 30;
   position: fixed;
-  background-color: #0e0b07;
   height: 6rem;
-  width: 100%; }
+  width: 100%;
+  display: flex; }
+  .nav__logo {
+    flex: 1; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-right: 2rem; }
+  .nav__item:not(:last-child) {
+    margin-right: 2rem; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: #bdc3c7; }
 
 .features {
   grid-column: center-start/ center-end;
