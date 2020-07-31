@@ -1,6 +1,7 @@
 @import './abstract/functions';
 @import './abstract/mixins';
 @import './abstract/variables';
+@import './abstract/utilities';
 
 @import './base/reset';
 @import './base/typography';
@@ -9,6 +10,7 @@
 @import './components/aboutUs';
 @import './components/contactUs';
 @import './components/button';
+@import './components/card';
 
 @import './layout/footer';
 @import './layout/grid';

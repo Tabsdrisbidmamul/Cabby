@@ -1,11 +1,86 @@
 .story {
     &__content {
         grid-column: col-start 4/ full-end;
-        background-color: orangered;
+        background-color: $color-secondary-dark;
+
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "\201C";
+            display: block;
+            position: absolute;
+            top: -6rem;
+            left: -2rem;
+            font-size: 50rem;
+            font-family: sans-serif;
+            color: #fff;
+            opacity: .5;
+            line-height: 1;
+        }
+
+        padding: 3rem;
+        display: flex;
+        flex-flow: column;
+        align-items: end;
+        justify-content: center;
+    }
+
+    &__heading-container {
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        text-align: right;
+    }
+
+    &__review {
+        text-align: right;
+        font-size: 1.6rem;
+        color: $color-grey-light-1;
+        font-style: italic;
+
     }
 
     &__pictures {
         grid-column: full-start / col-end 3;
-        background-color: orange;
+        
+        display: grid;
+        grid-template-columns: repeat(6, minmax(min-content, 1fr));
+        grid-template-rows: repeat(6, minmax(min-content, 1fr));
+        align-items: center;
+        padding: 3rem;
+        background-image: linear-gradient(
+            rgba(#000, .6), 
+            rgba(#000, .6)), 
+            url("../../img/story-background.jpg");
+        background-size: cover;
+        
     }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        grid-row: 2 / 6;
+        grid-column: 1 / -1;
+        object-fit: cover;
+        object-position: 100% 100%;
+        display: block;
+        border-radius: 3px;
+        // transform: translateX(-1.5rem);
+    }
+
+    &__fg {
+        z-index: 30;
+        width: 147%;
+        height: 100%;
+        grid-row: 4 / -1;
+        grid-column: 3 / -2;
+        object-fit: cover;
+        object-position: 100% 100%;
+        display: block;
+        border-radius: 3px;
+    }
+
+
 }

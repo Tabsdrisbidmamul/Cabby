@@ -1,6 +1,7 @@
 body {
     font-family: $font-main;
-    color: $color-grey-light-2;
+    color: $color-grey-light-3;
+    line-height: 1.6;
 }
 
 %heading-common {
@@ -11,10 +12,11 @@ body {
 .heading {
     &-1 {
         @extend %heading-common;
-        font-size: 8rem;
-        letter-spacing: .5rem;
+        font-size: 6.5rem;
+        letter-spacing: 1.5rem;
         text-transform: uppercase;
-
+        font-weight: 100;
+        line-height: 1;
     }
 
     &-2 {

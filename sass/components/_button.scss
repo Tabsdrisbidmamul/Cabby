@@ -12,7 +12,7 @@
             to right,
             rgba($color-gradient-yellow, .9), 
             rgba($color-gradient-orange, .9));
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         
         border-radius: 100rem;
         text-transform: uppercase;
@@ -48,6 +48,7 @@
             rgba($color-gradient-yellow, .9), 
             rgba($color-gradient-orange, .9));
         box-shadow: 0 2rem 4rem rgba(#000, .2);
+        
     }
 
     &:focus {

@@ -1,12 +1,32 @@
 .about-us {
-    &__content {
-        grid-column: full-start / col-end 3;
-        background-color: royalblue;
-    }
+        &__content {
+            grid-column: center-start / col-end 3;
+            background-color: $primary-color;
+            display: flex;
+            flex-flow: column;
+            align-items: start;
+            justify-content: center;
+        }
 
-    &__pictures {
-        grid-column: col-start 4/ full-end;
-        background-color: goldenrod;
-    }
+        &__header-container {
+
+        }
+
+
+
+        &__heading {
+            // font-size: 2rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+
+
+
+        &__pictures {
+            grid-column: col-start 4/ center-end;
+            background-color: goldenrod;
+        }
     
 }
