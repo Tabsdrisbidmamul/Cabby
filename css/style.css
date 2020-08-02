@@ -119,19 +119,21 @@ body {
   border-radius: 3px; }
 
 .about-us__content {
-  grid-column: center-start / col-end 3;
+  grid-column: full-start / col-end 3;
   background-color: #2f2519;
   display: flex;
   flex-flow: column;
   align-items: start;
-  justify-content: center; }
+  justify-content: center;
+  padding: 3rem; }
 
 .about-us__text {
   font-size: 1.6rem; }
 
 .about-us__pictures {
-  grid-column: col-start 4/ center-end;
-  background-color: goldenrod; }
+  grid-column: col-start 4/ full-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/story-background.jpg");
+  background-size: cover; }
 
 .contact-us {
   grid-column: center-start / center-end;
@@ -209,7 +211,7 @@ body {
 
 .header {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(to bottom, rgba(47, 37, 25, 0.95) 85%, rgba(47, 37, 25, 0.65) 100%), url("./../../img/hero-large.jpg");
+  background-image: linear-gradient(to bottom, rgba(47, 37, 25, 0.95) 90%, rgba(47, 37, 25, 0.8) 100%), url("./../../img/hero-large.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: grid;

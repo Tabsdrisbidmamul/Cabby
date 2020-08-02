@@ -1,32 +1,37 @@
 .about-us {
-        &__content {
-            grid-column: center-start / col-end 3;
-            background-color: $primary-color;
-            display: flex;
-            flex-flow: column;
-            align-items: start;
-            justify-content: center;
-        }
+    &__content {
+        grid-column: full-start / col-end 3;
+        background-color: $color-primary;
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        justify-content: center;
+        padding: 3rem;
+    }
 
-        &__header-container {
+    &__header-container {
 
-        }
-
-
-
-        &__heading {
-            // font-size: 2rem;
-        }
-
-        &__text {
-            font-size: 1.6rem;
-        }
+    }
 
 
 
-        &__pictures {
-            grid-column: col-start 4/ center-end;
-            background-color: goldenrod;
-        }
+    &__heading {
+        // font-size: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+
+
+    &__pictures {
+        grid-column: col-start 4/ full-end;
+        background-image: linear-gradient(
+            rgba(#000, .6), 
+            rgba(#000, .6)), 
+            url("../../img/story-background.jpg");
+        background-size: cover;
+    }
     
 }
