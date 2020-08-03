@@ -1,7 +1,11 @@
 .story {
     &__content {
         grid-column: col-start 4/ full-end;
-        background-color: $color-secondary-dark;
+        background-color: $color-tertiary-red;
+
+        @include respond(mid) {
+            grid-column: full-start / full-end;
+        }
 
         position: relative;
         overflow: hidden;
@@ -44,6 +48,10 @@
 
     &__pictures {
         grid-column: full-start / col-end 3;
+
+        @include respond(mid) {
+            grid-column: full-start / full-end;
+        }
         
         display: grid;
         grid-template-columns: repeat(6, minmax(min-content, 1fr));
@@ -72,10 +80,10 @@
 
     &__fg {
         z-index: 30;
-        width: 147%;
+        width: 105%;
         height: 100%;
         grid-row: 4 / -1;
-        grid-column: 3 / -2;
+        grid-column: 3 / -1;
         object-fit: cover;
         object-position: 100% 100%;
         display: block;

@@ -1,4 +1,71 @@
 .footer {
     grid-column: full-start / full-end;
-    background-color: lightcoral;
+    background-color: #1e272e;
+    padding: 4rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        justify-content: center;
+        justify-items: center;
+        align-items: start;
+        list-style: none;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: block;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: $color-grey-dark-1;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 200ms;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-tertiary-orange-light;
+            transform: translateY(-3px);
+        }
+    }
+
+    &__legal {
+        font-size: 1.2rem;
+        color: $color-grey-dark-1;
+    }
+}
+
+.social {
+    margin-right: 4rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-content: center;
+    justify-items: end;
+    margin-top: 8rem;
+
+    &__item {
+        
+    }
+
+    &__link {
+        svg {
+            height: 2rem;
+            width: 2rem;
+            fill: $color-grey-dark-1;
+            transition: all 200ms;
+
+            &:hover {
+                fill: $color-facebook;
+            }
+        }
+    }
 }

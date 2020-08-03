@@ -13,4 +13,8 @@
     minmax(6rem, 1fr) [full-end];
 
     grid-template-rows: calc(100vh) min-content 40vw 40vw repeat(2, min-content);
+
+    @include respond(mid) {
+        grid-template-rows: calc(100vh) min-content;
+    }
 }

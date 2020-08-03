@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Wimborne and Ferndown Cabby is a local taxi company that operates in Wimborne and Ferndown."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Lato:wght@100;300;400;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -13,7 +14,7 @@
             <div class="header__details">
                 <h1 class="heading-1">Wimborne and Ferndown Cabby</h1>
                 <h2 class="heading-2">Wherever, Whenever</h2>
-                <a class="btn btn-call" href="tel:01202887766">
+                <a class="btn btn-call js--btn-call" href="tel:01202887766">
                     <span class="btn-call--visible">
                         Call Now
                     </span>
@@ -141,12 +142,70 @@
         </section>
 
         <section class="contact-us">
-            Contact Us
+            <div class="contact-us__heading-box">
+                <h2 class="heading-2 contact-us__heading u-center u-mb-lg">How to get in contact</h2>
+            </div>
+
+            <div class="contact-us-grid">
+                <div class="contact-us__details">
+                    <a href="tel:01202887766">
+                        <svg class="contact-us__phone-icon">
+                            <use href="img/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </a>
+    
+                    <p class="contact-us__text"><a href="tel:01202887766">Call Us On 01202 887766</a></p>
+                </div>
+    
+                <div class="contact-us__details">
+                    <a href="https://www.facebook.com/wimborneferndowncabby">
+                        <svg class="contact-us__facebook-icon">
+                            <use href="img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+    
+                    <p class="contact-us__text"><a href="https://www.facebook.com/wimborneferndowncabby" target="_blank">Find Us On Social Media</a></p>
+                    
+                </div>
+            </div>
+
         </section>
 
         <footer class="footer">
-            Footer
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">About Us</a>
+                </li>
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Contact Us</a>
+                </li>
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </li>
+
+            </ul>
+
+            <ul class="social">
+                <li class="social__item">
+                    <a href="https://www.facebook.com/wimborneferndowncabby" class="social__link">
+                        <svg>
+                            <use href="img/sprite.svg#icon-facebook-with-circle"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer__legal u-center">
+                Copyright &copy; 2020 design of Wimborne and Ferndown Cabby 
+            </p>
+
         </footer>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/vendors/jquery.waypoints.min.js"></script>
+    <script src="js/src/index.js"></script>
 </body>
 </html>

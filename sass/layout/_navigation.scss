@@ -2,28 +2,35 @@
     z-index: 30;
 
     position: fixed;
-    // background-color: $color-primary-dark;
-    top: 2rem;
+    top: 0;
     left: 0;
-    height: 6rem;
+    height: 10rem;
     width: 100%;
-    // padding-top: 2rem;
+    // padding: 2rem 4rem;
     display: flex;
+    z-index: 1000;
+    transition: background-color 400ms;
+
+    &--light-bar {
+        background-color: #fff;
+    }
 
     &__logo {
         flex: 1;
         display: flex;
-        align-items: center;
+        align-items: start;
         margin-left: 6rem;
+        margin-top: 4rem;
     }
 
     &__list {
         list-style: none;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-items: center;
+
         font-size: 1.8rem;
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-right: 6rem;
         text-transform: uppercase;
     }
@@ -39,6 +46,21 @@
         &:visited {
             text-decoration: none;
             color: $color-grey-light-2;
+            transition: all 200ms;
+            display: block;
+            backface-visibility: hidden;
+            opacity: 1; //firefox
+        }
+
+        &--dark:link,
+        &--dark:visited {
+            color: $color-grey-dark-2;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-tertiary-orange;
+            transform: translateY(-3px);
         }
     }
 }
