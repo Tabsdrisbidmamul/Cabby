@@ -20,8 +20,9 @@
             }
 
             @include respond(small) {
-                font-size: 15rem;
+                font-size: 12rem;
                 top: -1.75rem;
+                
             }
 
             content: "\201C";
