@@ -3,14 +3,27 @@
         grid-column: col-start 4/ full-end;
         background-color: $color-tertiary-red;
 
-        @include respond(mid) {
+        @include respond(small-mid) {
             grid-column: full-start / full-end;
+            grid-row: 3 / 4;
         }
 
         position: relative;
         overflow: hidden;
 
         &::before {
+
+            @include respond(mid) {
+                font-size: 20rem;
+                top: -3rem;
+                left: -.7rem;
+            }
+
+            @include respond(small) {
+                font-size: 15rem;
+                top: -1.75rem;
+            }
+
             content: "\201C";
             display: block;
             position: absolute;
@@ -49,8 +62,14 @@
     &__pictures {
         grid-column: full-start / col-end 3;
 
-        @include respond(mid) {
+        @include respond(small-mid) {
             grid-column: full-start / full-end;
+            background-image: linear-gradient(
+            rgba(#000, .6), 
+            rgba(#000, .6)), 
+            url("../../img/story-background-small.jpg");
+            padding: 3rem;
+            
         }
         
         display: grid;
@@ -68,7 +87,7 @@
 
     &__bg {
         width: 100%;
-        height: 100%;
+        height: auto;
         grid-row: 2 / 6;
         grid-column: 1 / -1;
         object-fit: cover;
@@ -76,18 +95,32 @@
         display: block;
         border-radius: 3px;
         // transform: translateX(-1.5rem);
+
+        @include respond(small-mid) {
+            // grid-row: 3 / 7;
+            grid-column: 2 / -2;
+            width: 40vw;
+        }
+
+
     }
 
     &__fg {
         z-index: 30;
         width: 105%;
-        height: 100%;
+        height: auto;
         grid-row: 4 / -1;
         grid-column: 3 / -1;
         object-fit: cover;
         object-position: 100% 100%;
         display: block;
         border-radius: 3px;
+
+        @include respond(small-mid) {
+            grid-row: 3 / 6;
+            grid-column: 4 / -1;
+            width: 40vw;
+        }
     }
 
 

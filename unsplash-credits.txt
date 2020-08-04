@@ -1,6 +1,3 @@
-Hero
-<span>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/s/photos/wimborne-dorset?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-
 Hero Taxi
 <span>Photo by <a href="https://unsplash.com/@lexir703?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lexi Ruskell</a> on <a href="https://unsplash.com/s/photos/taxi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
