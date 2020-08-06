@@ -34,13 +34,17 @@
     &__pictures {
         @include respond(small-mid) {
             grid-column: full-start / full-end;
+            background-image: linear-gradient(
+            rgba(#000, .6), 
+            rgba(#000, .6)), 
+            url("../img/story-background-small.jpg");
         }
 
         grid-column: col-start 4/ full-end;
         background-image: linear-gradient(
             rgba(#000, .6), 
             rgba(#000, .6)), 
-            url("../../img/story-background.jpg");
+            url("../img/story-background.jpg");
         background-size: cover;
     }
     

@@ -18,5 +18,5 @@ $(function() {
         }
     });
 
-    $(".footer__legal").html(`Copyright &copy; ${date.getFullYear()} design of Wimborne and Ferndown Cabby`);
+    $(".footer__legal").html(`Copyright &copy; ${date.getFullYear()} of Wimborne and Ferndown Cabby`);
 })
