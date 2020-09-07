@@ -1,128 +1,115 @@
 .story {
-    &__content {
-        grid-column: col-start 4/ full-end;
-        background-color: $color-tertiary-red;
+  &__content {
+    grid-column: col-start 4 / full-end;
+    background-color: $color-tertiary-red;
 
-        @include respond(small-mid) {
-            grid-column: full-start / full-end;
-            grid-row: 3 / 4;
-        }
-
-        position: relative;
-        overflow: hidden;
-
-        &::before {
-
-            @include respond(mid) {
-                font-size: 20rem;
-                top: -3rem;
-                left: -.7rem;
-            }
-
-            @include respond(small) {
-                font-size: 12rem;
-                top: -1.75rem;
-                
-            }
-
-            content: "\201C";
-            display: block;
-            position: absolute;
-            top: -6rem;
-            left: -2rem;
-            font-size: 50rem;
-            font-family: sans-serif;
-            color: #fff;
-            opacity: .5;
-            line-height: 1;
-        }
-
-        padding: 3rem;
-        display: flex;
-        flex-flow: column;
-        align-items: end;
-        justify-content: center;
+    @include respond(small-mid) {
+      grid-column: full-start / full-end;
+      grid-row: 3 / 4;
     }
 
-    &__heading-container {
-        margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      @include respond(mid) {
+        font-size: 20rem;
+        top: -3rem;
+        left: -0.7rem;
+      }
+
+      @include respond(small) {
+        font-size: 12rem;
+        top: -1.75rem;
+      }
+
+      content: "\201C";
+      display: block;
+      position: absolute;
+      top: -6rem;
+      left: -2rem;
+      font-size: 50rem;
+      font-family: sans-serif;
+      color: #fff;
+      opacity: 0.5;
+      line-height: 1;
     }
 
-    &__heading {
-        text-align: right;
+    padding: 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+    justify-content: center;
+  }
+
+  &__heading-container {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    text-align: right;
+  }
+
+  &__review {
+    text-align: right;
+    font-size: 1.6rem;
+    color: $color-grey-light-1;
+    font-style: italic;
+  }
+
+  &__pictures {
+    grid-column: full-start / col-end 3;
+
+    @include respond(small-mid) {
+      grid-column: full-start / full-end;
+      background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
+        url("../img/story-background-small.jpg");
+      padding: 3rem;
     }
 
-    &__review {
-        text-align: right;
-        font-size: 1.6rem;
-        color: $color-grey-light-1;
-        font-style: italic;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, 1fr));
+    grid-template-rows: repeat(6, minmax(min-content, 1fr));
+    align-items: center;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
+      url("../img/story-background.jpg");
+    background-size: cover;
+  }
 
+  /*   &__bg {
+    width: 100%;
+    height: 100%;
+    grid-row: 2 / 6;
+    grid-column: 1 / -1;
+    object-fit: cover;
+    // object-position: 100% 100%;
+    display: block;
+    border-radius: 3px;
+    // transform: translateX(-1.5rem);
+
+    @include respond(small-mid) {
+      // grid-row: 3 / 7;
+      grid-column: 2 / -2;
+      width: 30vw;
     }
+  } */
 
-    &__pictures {
-        grid-column: full-start / col-end 3;
+  &__fg {
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    object-fit: cover;
+    object-position: 100% 100%;
+    display: block;
+    border-radius: 3px;
 
-        @include respond(small-mid) {
-            grid-column: full-start / full-end;
-            background-image: linear-gradient(
-            rgba(#000, .6), 
-            rgba(#000, .6)), 
-            url("../img/story-background-small.jpg");
-            padding: 3rem;
-            
-        }
-        
-        display: grid;
-        grid-template-columns: repeat(6, minmax(min-content, 1fr));
-        grid-template-rows: repeat(6, minmax(min-content, 1fr));
-        align-items: center;
-        padding: 3rem;
-        background-image: linear-gradient(
-            rgba(#000, .6), 
-            rgba(#000, .6)), 
-            url("../img/story-background.jpg");
-        background-size: cover;
-        
+    @include respond(small-mid) {
+      grid-row: 3 / 6;
+      grid-column: 3 / 6;
+      width: 30vw;
     }
-
-    &__bg {
-        width: 100%;
-        height: auto;
-        grid-row: 2 / 6;
-        grid-column: 1 / -1;
-        object-fit: cover;
-        object-position: 100% 100%;
-        display: block;
-        border-radius: 3px;
-        // transform: translateX(-1.5rem);
-
-        @include respond(small-mid) {
-            // grid-row: 3 / 7;
-            grid-column: 2 / -2;
-            width: 40vw;
-        }
-
-
-    }
-
-    &__fg {
-        z-index: 30;
-        width: 105%;
-        height: auto;
-        grid-row: 4 / -1;
-        grid-column: 3 / -1;
-        object-fit: cover;
-        object-position: 100% 100%;
-        display: block;
-        border-radius: 3px;
-
-        @include respond(small-mid) {
-            grid-row: 3 / 6;
-            grid-column: 4 / -1;
-            width: 40vw;
-        }
-    }
-
-
+  }
 }

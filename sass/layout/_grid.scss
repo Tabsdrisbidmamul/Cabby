@@ -1,20 +1,19 @@
 .container {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 
+  grid-template-columns:
     [full-start] minmax(6rem, 1fr)
-
     [center-start] minmax(min-content, 19.2rem)
-
-    repeat(6, [col-start] minmax(min-content, 19.2rem) [col-end]) 
-
+    repeat(6, [col-start] minmax(min-content, 19.2rem) [col-end])
     minmax(min-content, 19.2rem) [center-end]
-
     minmax(6rem, 1fr) [full-end];
 
-    grid-template-rows: calc(100vh) min-content 40vw 40vw repeat(2, min-content);
+  grid-template-rows: calc(100vh) min-content 30vw 30vw repeat(2, min-content);
 
-    @include respond(small-mid) {
-        grid-template-rows: calc(100vh) min-content min-content 40vw min-content 40vw repeat(2, min-content);
-    }
+  @include respond(small-mid) {
+    grid-template-rows: calc(100vh) min-content min-content 30vw min-content 30vw repeat(
+        2,
+        min-content
+      );
+  }
 }
